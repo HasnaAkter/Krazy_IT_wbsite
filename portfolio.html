@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krazy IT Protfolio</title>
+  <link
+  href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
+  rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/stylesheet/home.css">
+  <link rel="stylesheet" href="assets/script/home.js">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Manrope:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="module">
+    import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+  
+    const keenSlider = new KeenSlider(
+      '#keen-slider',
+      {
+        loop: true,
+        slides: {
+          origin: 'center',
+          perView: 1.25,
+          spacing: 16,
+        },
+        breakpoints: {
+          '(min-width: 1024px)': {
+            slides: {
+              origin: 'auto',
+              perView: 2.5,
+              spacing: 32,
+            },
+          },
+        },
+      },
+      []
+    )
+  
+    const keenSliderPrevious = document.getElementById('keen-slider-previous')
+    const keenSliderNext = document.getElementById('keen-slider-next')
+  
+    keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+    keenSliderNext.addEventListener('click', () => keenSlider.next())
+  </script>
+</head>
+
+<body >
+   <!--Top Nav Section-->
+  <div class="top-nav " style="background-color: #557389;">
+    <p class="text-center text-[#FFFFFF] mx-2">www.krazyit@gmail.com <span class="mx-2">Follow Us</span> <span class="mx-2">Facebook</span> <span class="mx-2">Twitter</span></p>
+    
+  </div>
+   <!--End Nav Section-->
+   
+      <!--Nav Section-->
+  <header class="h-20 bg-white">
+    <nav class="relative px-2 py-4">
+      
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="home.html"> <img src="assets/images/logo.png" alt="Tailwindcss Navigation"></a>
+
+          <ul class="hidden md:flex space-x-6">
+            <li><a href="home.html" class="text-[#00b79c] text-[18px]">Home</a></li>
+            <li><a href="about-us.html" class="text-[#00b79c] text-[18px]">About us</a></li>
+            <li class="flex relative group">
+              <a href="services.html" class="mr-1 text-[#00b79c] text-[18px]" >Services</a> 
+              
+              <!-- Submenu starts -->
+              <!-- <ul class="absolute bg-white p-3 w-52 top-6 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-lg">
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#" >Webdesign</a></li>
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#">Digital marketing</a></li>
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#">SEO</a></li>
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#">Ad campaigns</a></li>
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#">UX Design</a></li>
+              </ul> -->
+              <!-- Submenu ends -->
+            </li>
+            <li><a href="#" class="text-[#00b79c] text-[18px]">Product</a></li>
+            <li><a href="#" class="text-[#00b79c] text-[18px]">Client</a></li>
+            <li><a href="#" class="text-[#00b79c] text-[18px]">Contact Us</a></li>
+          </ul>
+
+          <a href="#" class="bg-red-400 px-5 py-1 rounded-3xl hover:bg-red-500 text-white hidden md:flex" role="button">Sign In</a>
+        
+        <!-- Mobile menu icon -->
+        <button id="mobile-icon" class="md:hidden">
+          <i onclick="changeIcon(this)" class="fa-solid fa-bars"></i>
+        </button>
+        
+        </div>
+      
+      <!-- Mobile menu -->
+      <div class="md:hidden flex justify-center mt-3 w-full">
+        <div id="mobile-menu" class="mobile-menu absolute top-23 w-full"> <!-- add hidden here later -->
+          <ul class="bg-gray-100 shadow-lg leading-9 font-bold h-screen">
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="https://google.com" class="block pl-7">Home</a></li>
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="#" class="block pl-7">News</a></li>
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white">
+              <a href="#" class="block pl-11">Services <i class="fa fa-sort-desc" style="font-size:24px"></i></a> 
+              
+              <!-- Submenu starts -->
+              <ul class="bg-white text-gray-800 w-full">
+                <li class="text-sm leading-8 font-normal hover:bg-dark-200"><a class="block pl-16" href="#">Webdesign</a></li>
+                <li class="text-sm leading-8 font-normal hover:bg-dark-200"><a class="block pl-16" href="#">Digital marketing</a></li>
+                <li class="text-sm leading-8 font-normal hover:bg-slate-200"><a class="block pl-16" href="#">SEO</a></li>
+                <li class="text-sm leading-8 font-normal hover:bg-slate-200"><a class="block pl-16" href="#">Ad campaigns</a></li>
+                <li class="text-sm leading-8 font-normal hover:bg-slate-200"><a class="block pl-16" href="#">UX Design</a></li>
+              </ul>
+              <!-- Submenu ends -->
+            </li>
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="#" class="block pl-7">About</a></li>
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="#" class="block pl-7">Contact</a></li>
+          </ul>
+          </div>
+      </div>
+
+    </nav>
+  </header>
+
+    <!--End  Nav Section-->
+  
+  <!-- profolio banner section starts -->
+
+
+  <section class="relative py-24 px-4 ">
+    <div class="z-20 relative text-white container mx-auto">
+      <h1 class="text-dark mb-4 text-3xl font-bold text-center sm:text-4xl md:text-[40px] ">Portfolio</h1>
+   
+      <p class="leading-normal text-center text-[20px] font-[500]">Home-Portfolio</p>
+      <!-- <a href="#" class="inline-block bg-[#00B79C] text-white no-underline hover:bg-gray-800 mt-4  px-9 py-2 rounded text-[20px] font-[600]" style="border-radius: 10px;">Get Started</a> -->
+    </div>
+    <div class="absolute inset-0 h-auto z-10">
+      <img src="/assets/images/protfolio-banner.png" alt="" class="h-full w-full object-fit-cover">
+    </div>
+  </section>
+ <!-- protfolio banner section end -->
+ 
+
+
+  <!--image scrolling section -->
+  <div class="flex space-x-2 space-y-2 flex-wrap justify-center items-baseline mt-5">
+    <a href="#" class="inline-block bg-[#00B79C] text-white no-underline hover:bg-gray-800 mt-4  px-9 py-2 rounded text-[15px] font-[600]" style="border-radius: 10px;">All</a>
+    <a href="#" class="inline-block bg-[#E0F2FF]  no-underline hover:bg-gray-800 mt-4 text-[#243B59] px-9 py-2 rounded text-[15px] font-[600]" style="border-radius: 10px;">Web & Mobile Apps Design</a>
+    <a href="#" class="inline-block bg-[#E0F2FF]  no-underline hover:bg-gray-800 mt-4  text-[#243B59] px-9 py-2 rounded text-[15px] font-[600]" style="border-radius: 10px;">Web & Mobile App DEvelopment</a>
+ </div>
+ <div class="flex space-x-2 space-y-2 flex-wrap justify-center items-baseline">
+  <a href="#" class="inline-block  bg-[#E0F2FF]   text-[#243B59] no-underline hover:bg-gray-800 mt-4  px-9 py-2 rounded text-[15px] font-[600]" style="border-radius: 10px;">Graphic Design</a>
+  <a href="#" class="inline-block bg-[#E0F2FF]  no-underline hover:bg-gray-800 mt-4 text-[#243B59] px-9 py-2 rounded text-[15px] font-[600]" style="border-radius: 10px;">Graphic Design</a>
+  <a href="#" class="inline-block bg-[#E0F2FF]  no-underline hover:bg-gray-800 mt-4  text-[#243B59] px-9 py-2 rounded text-[15px] font-[600]" style="border-radius: 10px;">Digital Marketing</a>
+</div>
+
+  
+ 
+
+<br>
+<br><br>
+
+<!-- sm:max-w-xl -->
+<div class="min-h-screen bg-white flex flex-col justify-center  ">
+  <div class=" container mx-auto">
+    <!--div class="md:flex md:flex-wrap md:gap-6"-->
+    <div class="md:grid md:gap-6 md:grid-cols-2 lg:grid-cols-3 ">
+      <!-- blog article card  -->
+      <article class="mb-6 transition-transform duration-300 group transform hover:-translate-y-4">
+        <div class="relative  rounded-2xl">
+          <img class="h-auto w-full rounded-2xl object-cover transition-shadow duration-300 group-hover:shadow-2xl" src="/assets/images/online-web-design.png">
+          <a class="flex justify-center items-center bg-yellow-500 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-opacity duration-300 text-xl group-hover:opacity-100" href="#" target="_blank" rel="noopener noreferrer">
+            Read article <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+            </a>
+        </div>
+ 
+      </article>
+
+      <!-- blog article card  -->
+      <article class="mb-6 transition-transform duration-300 group transform hover:-translate-y-4">
+        <div class="relative mb-4 rounded-2xl">
+          <img class="h-auto w-full rounded-2xl object-cover transition-shadow duration-300 group-hover:shadow-2xl" src="/assets/images/hand-laptop.png">
+          <a class="flex justify-center items-center bg-yellow-500 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-opacity duration-300 text-xl group-hover:opacity-100" href="#" target="_blank" rel="noopener noreferrer">
+            Read article <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+            </a>
+        </div>
+     
+
+      </article>
+
+
+
+      <!-- blog article card  -->
+      <article class="mb-6 transition-transform duration-300 group transform hover:-translate-y-4">
+        <div class="relative mb-4 rounded-2xl">
+          <img class="h-auto w-full rounded-2xl object-cover transition-shadow duration-300 group-hover:shadow-2xl" src="/assets/images/programming-background-collage.png">
+          <a class="flex justify-center items-center bg-yellow-500 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-opacity duration-300 text-xl group-hover:opacity-100" href="#" target="_blank" rel="noopener noreferrer">
+            Read article <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+            </a>
+        </div>
+     
+      </article>
+
+    </div>
+
+      <!--div class="md:flex md:flex-wrap md:gap-6"-->
+      <div class="md:grid md:gap-6 md:grid-cols-2 lg:grid-cols-3 ">
+        <!-- blog article card  -->
+        <article class="mb-6 transition-transform duration-300 group transform hover:-translate-y-4">
+          <div class="relative mb-4 rounded-2xl">
+            <img class="h-auto w-full rounded-2xl object-cover transition-shadow duration-300 group-hover:shadow-2xl" src="/assets/images/look-laptop-woman.png">
+            <a class="flex justify-center items-center bg-yellow-500 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-opacity duration-300 text-xl group-hover:opacity-100" href="#" target="_blank" rel="noopener noreferrer">
+              Read article <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+              </a>
+          </div>
+   
+        </article>
+  
+        <!-- blog article card  -->
+        <article class="mb-6 transition-transform duration-300 group transform hover:-translate-y-4">
+          <div class="relative mb-4 rounded-2xl">
+            <img class="h-auto w-full rounded-2xl object-cover transition-shadow duration-300 group-hover:shadow-2xl" src="/assets/images/screen.png">
+            <a class="flex justify-center items-center bg-yellow-500 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-opacity duration-300 text-xl group-hover:opacity-100" href="#" target="_blank" rel="noopener noreferrer">
+              Read article <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+              </a>
+          </div>
+       
+  
+        </article>
+  
+  
+  
+        <!-- blog article card  -->
+        <article class="mb-6 transition-transform duration-300 group transform hover:-translate-y-4">
+          <div class="relative mb-4 rounded-2xl">
+            <img class="h-auto w-full rounded-2xl object-cover transition-shadow duration-300 group-hover:shadow-2xl" src="/assets/images/hand-book-pen.png">
+            <a class="flex justify-center items-center bg-yellow-500 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-opacity duration-300 text-xl group-hover:opacity-100" href="#" target="_blank" rel="noopener noreferrer">
+              Read article <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+              </a>
+          </div>
+       
+        </article>
+  
+      </div>
+         <!--div class="md:flex md:flex-wrap md:gap-6"-->
+         <div class="md:grid md:gap-6 md:grid-cols-2 lg:grid-cols-3 ">
+          <!-- blog article card  -->
+          <article class="mb-6 transition-transform duration-300 group transform hover:-translate-y-4">
+            <div class="relative mb-4 rounded-2xl">
+              <img class="h-auto w-full rounded-2xl object-cover transition-shadow duration-300 group-hover:shadow-2xl" src="/assets/images/shot.png">
+              <a class="flex justify-center items-center bg-yellow-500 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-opacity duration-300 text-xl group-hover:opacity-100" href="#" target="_blank" rel="noopener noreferrer">
+                Read article <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+     
+          </article>
+    
+          <!-- blog article card  -->
+          <article class="mb-6 transition-transform duration-300 group transform hover:-translate-y-4">
+            <div class="relative mb-4 rounded-2xl">
+              <img class="h-auto w-full rounded-2xl object-cover transition-shadow duration-300 group-hover:shadow-2xl" src="/assets/images/laptop.png">
+              <a class="flex justify-center items-center bg-yellow-500 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-opacity duration-300 text-xl group-hover:opacity-100" href="#" target="_blank" rel="noopener noreferrer">
+                Read article <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+         
+    
+          </article>
+    
+    
+    
+          <!-- blog article card  -->
+          <article class="mb-6 transition-transform duration-300 group transform hover:-translate-y-4">
+            <div class="relative mb-4 rounded-2xl">
+              <img class="h-auto w-full rounded-2xl object-cover transition-shadow duration-300 group-hover:shadow-2xl" src="/assets/images/baground.png">
+              <a class="flex justify-center items-center bg-yellow-500 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-opacity duration-300 text-xl group-hover:opacity-100" href="#" target="_blank" rel="noopener noreferrer">
+                Read article <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+         
+          </article>
+    
+        </div>
+      <div class="flex flex-col justify-center items-center">  <a href="#" class="inline-block bg-[#00B79C]  text-white no-underline hover:bg-gray-800 mt-4  px-9 py-2 rounded text-[20px] font-[600]" style="border-radius: 10px;">Load More</a></div>
+
+  </div>
+</div>
+<br>
+<br>
+<br>
+<!--end image scrolling section-->
+
+<!--project-mind-section start-->
+<div class="bg-[#E0F2FF] h-80"><div class="flex mb-4 container">
+  <div class="w-1/2 py-20 ">
+    <p class=" text-[#243B59] text-[18px] mx-5 font-bold">Got A Project in Mind?</p>
+    <p class="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] text-[#00b79c] mx-5">Let’s Start Working Together</p>
+
+  </div>
+  <div class="w-1/2 flex flex-col justify-center items-end">  <a href="#" class="inline-block bg-[#00B79C]  text-white no-underline hover:bg-gray-800 mt-4  px-9 py-2 rounded text-[20px] font-[600]" style="border-radius: 10px; ">Get Started</a></div>
+  <br> <br>
+</div></div>
+<!--project-mind-section end-->
+
+<!--FOOTER Section start -->
+
+
+
+  <div class="flex flex-col mx-auto">
+
+    <div class="flex lg:items-center lg:justify-between flex-col lg:flex-row gap-y-[45px] py-[30px] lg:py-0 px-[15px] sm:px-[30px] md:px-[40px] lg:px-[50px] xl:px-[75px] w-full h-auto lg:h-[380px] bg-[#00B79C]">
+
+      <div class="lg:w-4/12">
+
+        <img src="/assets/images/footer-banner.png" alt="" class="mx-20 ">
+
+        <div class=" text-gray-200 my-4 mx-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum doloremque praesentium repudiandae similique quas ipsa!</div>
+        
+        
+      </div>
+
+      <div class="flex justify-center sm:justify-between flex-wrap lg:flex-nowrap gap-y-[60px] gap-x-[90px] sm:gap-x-0 lg:w-7/12">
+
+        <div class="text-center sm:text-left">
+
+          <div class="mb-[18px]  text-[#FFFFFF] text-[18px] font-bold select-none">Quick Links</div>
+
+          <ul class="flex flex-col gap-[10px] text-[#FFFFFF]">
+            <a class="hover:underline" href="#">
+              <li>How it works   </li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Privacy policy</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Terms of Service</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Refund policy</li>
+            </a>
+          
+            
+          </ul>
+
+        </div>
+
+        <div class="text-center sm:text-left">
+
+          <div class="mb-[18px]  text-[#FFFFFF] text-[18px] font-bold select-none">Discover</div>
+
+          <ul class="flex flex-col gap-[10px] text-[#FFFFFF]">
+            <a class="hover:underline" href="#">
+              <li>Geeks CRS</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Tutor2U</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Kick-Ass Seniors</li>
+            </a>
+           
+          </ul>
+
+        </div>
+
+        <div class="text-center sm:text-left">
+
+          <div class="mb-[18px]  text-[#FFFFFF] text-[18px] font-bold select-none">Partners</div>
+
+          <ul class="flex flex-col gap-[10px] text-[#FFFFFF]">
+            <a class="hover:underline" href="#">
+              <li>Blog</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Newsletter</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Events</li>
+            </a>
+            <a class="hover:underline" href="#">
+            
+          </ul>
+
+        </div>
+           
+        
+  
+        
+
+      </div>
+  
+    </div>
+
+      <!--Copyright section-->
+  <div class=" p-6 bg-[#00B79C]"  >
+    <p class=" text-white mx-20">Copyright © 2022 Geeks CRS. All rights reserved. ABN: 59616635664</p>
+   
+  </div>
+
+  </div>
+  <!-- end image scrolling section -->
+
+  
+<!--FOOTER Section end -->
+
+</body>
+</html>

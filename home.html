@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krazy It</title>
+  <link
+  href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
+  rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/stylesheet/home.css">
+  <link rel="stylesheet" href="assets/script/home.js">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Manrope:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="module">
+    import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+  
+    const keenSlider = new KeenSlider(
+      '#keen-slider',
+      {
+        loop: true,
+        slides: {
+          origin: 'center',
+          perView: 1.25,
+          spacing: 16,
+        },
+        breakpoints: {
+          '(min-width: 1024px)': {
+            slides: {
+              origin: 'auto',
+              perView: 2.5,
+              spacing: 32,
+            },
+          },
+        },
+      },
+      []
+    )
+  
+    const keenSliderPrevious = document.getElementById('keen-slider-previous')
+    const keenSliderNext = document.getElementById('keen-slider-next')
+  
+    keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+    keenSliderNext.addEventListener('click', () => keenSlider.next())
+  </script>
+</head>
+
+<body >
+  <!--Top Nav Section-->
+  <div class="top-nav " style="background-color: #557389;">
+    <p class="text-center text-[#FFFFFF] mx-2">www.krazyit@gmail.com <span class="mx-2">Follow Us</span> <span class="mx-2">Facebook</span> <span class="mx-2">Twitter</span></p>
+    
+  </div>
+    <!--End Top Nav Section-->
+
+      <!--Nav Section-->
+  <header class="h-20 bg-white">
+    <nav class="relative px-2 py-4">
+      
+      <div class="container mx-auto flex justify-between items-center">
+         <a href="home.html"> <img src="assets/images/logo.png" alt="Tailwindcss Navigation"></a>
+
+          <ul class="hidden md:flex space-x-6">
+            <li><a href="home.html" class="text-[#00b79c] text-[18px]">Home</a></li>
+            <li><a href="about-us.html" class="text-[#00b79c] text-[18px]">About us</a></li>
+            <li class="flex relative group">
+              <a href="services.html" class="mr-1 text-[#00b79c] text-[18px]" >Services</a> 
+              
+              <!-- Submenu starts -->
+              <!-- <ul class="absolute bg-white p-3 w-52 top-6 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-lg">
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#" >Webdesign</a></li>
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#">Digital marketing</a></li>
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#">SEO</a></li>
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#">Ad campaigns</a></li>
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#">UX Design</a></li>
+              </ul> -->
+              <!-- Submenu ends -->
+            </li>
+            <li><a href="#" class="text-[#00b79c] text-[18px]">Product</a></li>
+            <li><a href="#" class="text-[#00b79c] text-[18px]">Client</a></li>
+            <li><a href="#" class="text-[#00b79c] text-[18px]">Contact Us</a></li>
+          </ul>
+
+          <a href="#" class="bg-red-400 px-5 py-1 rounded-3xl hover:bg-red-500 text-white hidden md:flex" role="button">Sign In</a>
+        
+        <!-- Mobile menu icon -->
+        <button id="mobile-icon" class="md:hidden">
+          <i onclick="changeIcon(this)" class="fa-solid fa-bars"></i>
+        </button>
+        
+        </div>
+      
+      <!-- Mobile menu -->
+      <div class="md:hidden flex justify-center mt-3 w-full">
+        <div id="mobile-menu" class="mobile-menu absolute top-23 w-full"> <!-- add hidden here later -->
+          <ul class="bg-gray-100 shadow-lg leading-9 font-bold h-screen">
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="https://google.com" class="block pl-7">Home</a></li>
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="#" class="block pl-7">News</a></li>
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white">
+              <a href="#" class="block pl-11">Services <i class="fa fa-sort-desc" style="font-size:24px"></i></a> 
+              
+              <!-- Submenu starts -->
+              <ul class="bg-white text-gray-800 w-full">
+                <li class="text-sm leading-8 font-normal hover:bg-dark-200"><a class="block pl-16" href="#">Webdesign</a></li>
+                <li class="text-sm leading-8 font-normal hover:bg-dark-200"><a class="block pl-16" href="#">Digital marketing</a></li>
+                <li class="text-sm leading-8 font-normal hover:bg-slate-200"><a class="block pl-16" href="#">SEO</a></li>
+                <li class="text-sm leading-8 font-normal hover:bg-slate-200"><a class="block pl-16" href="#">Ad campaigns</a></li>
+                <li class="text-sm leading-8 font-normal hover:bg-slate-200"><a class="block pl-16" href="#">UX Design</a></li>
+              </ul>
+              <!-- Submenu ends -->
+            </li>
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="#" class="block pl-7">About</a></li>
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="#" class="block pl-7">Contact</a></li>
+          </ul>
+          </div>
+      </div>
+
+    </nav>
+  </header>
+    <!--End Top Nav Section-->
+  
+  <!-- Home Banner section starts -->
+
+
+  <section class="relative py-24 px-4 ">
+    <div class="z-20 relative text-white container mx-auto">
+      <h1 class="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] ">We are Your Premier IT and </h1>
+      <h1 class=" text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] ">Tech Solutions Provider </h1>
+      <p class="leading-normal text-[20px] font-[500]">At Krazy IT, we take pride in being a leading IT and tech solutions provider. </p>
+      <p class="leading-normal  text-[20px] font-[500]"> With years of experience and a commitment to  excellence, we offer</p>
+      <p class="leading-normal  text-[20px] font-[500]">  a wide range of services to meet your unique needs.</p>
+      <a href="#" class="inline-block bg-[#00B79C] text-white no-underline hover:bg-gray-800 mt-4  px-9 py-2 rounded text-[20px] font-[600]" style="border-radius: 10px;">Get Started</a>
+    </div>
+    <div class="absolute inset-0 h-auto z-10">
+      <img src="/assets/images/home-page-banner.png" alt="" class="h-full w-full object-fit-cover">
+    </div>
+  </section>
+ <!-- home banner section end -->
+ 
+  <!-- solution section start-->
+  <div class=" p-20 grid gap-4 grid-cols-2 container flex flex-col items-center  mx-auto">
+    <div>   <img src="/assets/images/home-video.png" class=" " ></div>
+    <div><p class="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] text-[#00b79c] mx-5">We Are One of the Best , 
+       
+      IT solution Company</p>
+        
+      <p class=" text-[#243B59] text-[18px] mx-5">
+        Our mission is clear: we aim to empower our clients by handling  their IT and tech needs,
+
+        allowing them to focus on their core work.  We take pride in our two guiding principles
+        
+        - Honesty and Fun.  We're honest in our recommendations and enjoy every moment of 
+        
+        helping you succeed. Choose Krazy IT for top-notch IT and tech  services and a partnership
+        
+        that's both effective and enjoyable.</p>
+         <a href="#" class="inline-block bg-[#00B79C] text-white no-underline hover:bg-gray-800 mt-4  px-9 py-2 rounded text-[20px] font-[600] mx-5" style="border-radius: 10px;">Discover More</a></div>
+ 
+    
+  </div>
+ 
+  <!--solution section end-->
+
+  <!-- ====== Services Section Start -->
+<section class="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]  bg-[#E0F2FF] ">
+  <div class="container mx-auto ">
+    <h2
+    class="text-dark  text-3xl font-bold sm:text-4xl md:text-[40px] text-[#00b79c]"
+  >
+  Why Choose Us ?
+  </h2>
+    <div class="-mx-4 flex flex-wrap">
+      <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+        <div
+          class="mb-8 rounded-[20px]  p-10  md:px-7 xl:px-10"
+        >
+          <div
+            class="bg-primary my-10 mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
+          >
+            <img src="/assets/images/support.png" alt="">
+          </div>
+          <h4 class="text-[#243B59] mb-3 text-xl font-semibold">
+            Full Time Support 
+          </h4>
+          <p class="text-[#243B59]">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an took a galley of type and scrambled it to 
+          </p>
+        </div>
+      </div>
+      <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+        <div
+          class="mb-8 rounded-[20px]  p-10  md:px-7 xl:px-10"
+        >
+          <div
+            class="bg-primary my-10 mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
+          >
+          <img src="/assets/images/trust.png" alt="">
+          </div>
+          <h4 class="text-[#243B59] mb-3 text-xl font-semibold">
+            Faster, Quality & Trusted
+          </h4>
+          <p class="text-[#243B59]">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an took a galley of type and scrambled it to 
+          </p>
+        </div>
+      </div>
+      <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+        <div
+          class="mb-8 rounded-[20px]  p-10  md:px-7 xl:px-10"
+        >
+          <img src="/assets/images/services.png" alt="">
+      </div>
+  
+     
+      
+    </div>
+  </div>
+</section>
+<!-- ====== Services Section End -->
+
+<!-- ====== What We Do Section Start -->
+<!-- <section class="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
+  <div class="container mx-auto">
+    <div class="-mx-4 flex flex-wrap">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
+          
+          <h2
+          class="text-dark  text-3xl font-bold sm:text-4xl md:text-[40px] text-[#00b79c]"
+          >
+          What We Do
+          </h2>
+          <p class="text-dark  my-3  md:text-[17px]  text-[400]">
+            WE ARE OFFERING ALL KINDS OF IT SOLUTIONS SERVICES
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="-mx-4 flex flex-wrap ">
+      <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+        <div
+          class="mb-8 rounded-[20px] bg-white p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10"
+        >
+          <div
+            class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
+          >
+            <img src="/assets/images/web-designn.png" alt="" class="">
+          </div>
+          <h4 class=" text-[#00b79c] mb-3 text-xl font-semibold">
+            Web Development
+          </h4>
+          <p class="text-body-color ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi obcaecati numquam quis rerum autem qui veniam repellendus! Doloribus ducimus placeat voluptas, iste neque maiores nihil doloremque, incidunt quasi facere harum!
+          </p>
+        </div>
+      </div>
+      <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+        <div
+          class="mb-8 rounded-[20px] bg-white p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10"
+        >
+          <div
+            class="bg-primary mb-8 flex h-[70px] w-[70px]  rounded-2xl "
+          >
+            <img src="/assets/images/web-developnd.png" alt="">
+          </div>
+          <h4 class=" text-[#00b79c] mb-3 text-xl font-semibold">
+            Web Design
+          </h4>
+          <p class="text-body-color ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi obcaecati numquam quis rerum autem qui veniam repellendus! Doloribus ducimus placeat voluptas, iste neque maiores nihil doloremque, incidunt quasi facere harum!
+          </p>
+        </div>
+      </div>
+      <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+        <div
+          class="mb-8 rounded-[20px] bg-white p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10"
+        >
+          <div
+            class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
+          >
+            <img src="/assets/images/web-developnd.png" alt="">
+          </div>
+          <h4 class=" text-[#00b79c] mb-3 text-xl font-semibold">Web Site Testing</h4>
+          <p class="text-body-color ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi obcaecati numquam quis rerum autem qui veniam repellendus! Doloribus ducimus placeat voluptas, iste neque maiores nihil doloremque, incidunt quasi facere harum!
+          </p>
+        </div>
+      </div>
+      <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+        <div
+          class="mb-8 rounded-[20px] bg-white p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10"
+        >
+          <div
+            class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
+          >
+            <img src="/assets/images/testing.png" alt="">
+          </div>
+          <h4 class="text-[#00b79c] mb-3 text-xl font-semibold">Web Site Testing</h4>
+          <p class="text-body-color ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi obcaecati numquam quis rerum autem qui veniam repellendus! Doloribus ducimus placeat voluptas, iste neque maiores nihil doloremque, incidunt quasi facere harum!
+          </p>
+        </div>
+      </div>
+      <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+        <div
+          class="mb-8 rounded-[20px] bg-white p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10"
+        >
+          <div
+            class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
+          >
+          <img src="/assets/images/web-designn.png" alt="">
+          </div>
+          <h4 class=" text-[#00b79c] mb-3 text-xl font-semibold">
+            Web Site Testing
+          </h4>
+          <p class="text-body-color ">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi obcaecati numquam quis rerum autem qui veniam repellendus! Doloribus ducimus placeat voluptas, iste neque maiores nihil doloremque, incidunt quasi facere harum!
+          </p>
+        </div>
+      </div>
+      <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+        <div
+          class="mb-8 rounded-[20px] bg-white p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10"
+        >
+          <div
+            class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
+          >
+          <img src="/assets/images/web-designn.png" alt="">
+          </div>
+          <h4 class=" text-[#00b79c] mb-3 text-xl font-semibold">
+            Web Site Testing
+          </h4>
+          <p class="text-body-color ">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi obcaecati numquam quis rerum autem qui veniam repellendus! Doloribus ducimus placeat voluptas, iste neque maiores nihil doloremque, incidunt quasi facere harum!
+          </p>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</section> -->
+<!-- ====== What We Do Section Start -->
+<section class="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
+  <div class="container mx-auto">
+    <div class="-mx-4 flex flex-wrap">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
+          
+          <h2
+          class="text-dark  text-3xl font-bold sm:text-4xl md:text-[40px] text-[#00b79c]"
+          >
+          What We Do
+          </h2>
+             <img src="/assets/images/we-do.png" class="py-20" alt="">
+             <p class="text-dark    md:text-[17px]  text-[400]">WE ARE OFFERING ALL KINDS OF IT SOLUTIONS SERVICES</p>
+          <a href="#" class="inline-block bg-[#00B79C] text-white no-underline hover:bg-gray-800 mt-4  px-9 py-2 rounded text-[20px] font-[600]" style="border-radius: 10px;">View All Services</a>
+          
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</section>
+
+<!-- ======What We Do Section End -->
+
+<!----Review Section start-->
+<section class="bg-[#E0F2FF]">
+  <div
+    class="mx-auto max-w-[1340px]     "
+  >
+ <div class="py-24">
+  <h2
+  class="text-dark  text-3xl font-bold sm:text-4xl md:text-[40px] text-[#00b79c] text-center " 
+  >
+  Client Reviews
+  </h2>
+  <p class="text-dark  my-5  md:text-[17px]  text-[400] text-center">
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam commodi officia, exercitationem 
+  </p>
+ </div>
+
+    <div class="  lg:col-span-2 lg:mx-0">
+      <div id="keen-slider" class="keen-slider">
+        <div class="keen-slider__slide">
+          <blockquote
+            class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+          >
+            <div>
+              <div class="flex gap-0.5 text-green-500">
+                <img src="/assets/images/review.png" class="h-10 w-10 mx-2" alt="">
+
+                <svg
+                  class="h-5 w-5 text-[#F0B460]  "
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <svg
+                  class="h-5 w-5 text-[#F0B460]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <svg
+                  class="h-5 w-5 text-[#F0B460]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <svg
+                  class="h-5 w-5 text-[#F0B460]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+              </div>
+
+              <div class="mt-4">
+                <p class="text-2xl font-bold text-rose-600 sm:text-3xl">
+                  Stayin' Alive
+                </p>
+
+                <p class="mt-4 leading-relaxed text-gray-700">
+                  No, Rose, they are not breathing. And they have no arms or
+                  legs … Where are they? You know what? If we come across
+                  somebody with no arms or legs, do we bother resuscitating
+                  them? I mean, what quality of life do we have there?
+                </p>
+              </div>
+            </div>
+
+            <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+              &mdash; Michael Scott
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="keen-slider__slide">
+          <blockquote
+            class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+          >
+            <div>
+              <div class="flex gap-0.5 text-green-500">
+                <img src="/assets/images/review.png" class="h-10 w-10 mx-2" alt="">
+
+                <svg
+                  class="h-5 w-5 text-[#F0B460]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <svg
+                  class="h-5 w-5 text-[#F0B460]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <svg
+                  class="h-5 w-5 text-[#F0B460]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <svg
+                  class="h-5 w-5 text-[#F0B460]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+              </div>
+
+              <div class="mt-4">
+                <p class="text-2xl font-bold text-rose-600 sm:text-3xl">
+                  Stayin' Alive
+                </p>
+
+                <p class="mt-4 leading-relaxed text-gray-700">
+                  No, Rose, they are not breathing. And they have no arms or
+                  legs … Where are they? You know what? If we come across
+                  somebody with no arms or legs, do we bother resuscitating
+                  them? I mean, what quality of life do we have there?
+                </p>
+              </div>
+            </div>
+
+            <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+              &mdash; Michael Scott
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="keen-slider__slide">
+          <blockquote
+            class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+          >
+            <div>
+              <div class="flex gap-0.5 text-green-500">
+                <img src="/assets/images/review.png" class="h-10 w-10 mx-2" alt="">
+
+                <svg
+                  class="h-5 w-5 text-[#F0B460]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <svg
+                  class="h-5 w-5 text-[#F0B460]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <svg
+                  class="h-5 w-5 text-[#F0B460]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <svg
+                  class="h-5 w-5 text-[#F0B460]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+              </div>
+
+              <div class="mt-4">
+                <p class="text-2xl font-bold text-rose-600 sm:text-3xl">
+                  Stayin' Alive
+                </p>
+
+                <p class="mt-4 leading-relaxed text-gray-700">
+                  No, Rose, they are not breathing. And they have no arms or
+                  legs … Where are they? You know what? If we come across
+                  somebody with no arms or legs, do we bother resuscitating
+                  them? I mean, what quality of life do we have there?
+                </p>
+              </div>
+            </div>
+
+            <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+              &mdash; Michael Scott
+            </footer>
+          </blockquote>
+        </div>
+        
+      </div>
+    </div>
+    <div class="max-w-7xl items-end justify-between sm:flex sm:pe-6 lg:pe-8 my-20" style="justify-content: center;">
+     
+
+      <div class="my-3 flex gap-4 lg:mt-0 ">
+        <button
+          aria-label="Previous slide"
+          id="keen-slider-previous"
+          class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-5 w-5 rtl:rotate-180"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </button>
+         <h1></h1>
+        <button
+          aria-label="Next slide"
+          id="keen-slider-next"
+          class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+        >
+          <svg
+            class="h-5 w-5 rtl:rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 5l7 7-7 7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </div>
+      
+    </div>
+    <br>
+      
+  </div>
+</section>
+<!----Review Section end-->
+
+<!--FOOTER Section start -->
+
+
+
+  <div class="flex flex-col mx-auto">
+
+    <div class="flex lg:items-center lg:justify-between flex-col lg:flex-row gap-y-[45px] py-[30px] lg:py-0 px-[15px] sm:px-[30px] md:px-[40px] lg:px-[50px] xl:px-[75px] w-full h-auto lg:h-[380px] bg-[#00B79C]">
+
+      <div class="lg:w-4/12">
+
+        <img src="/assets/images/footer-banner.png" alt="" class="mx-20 ">
+
+        <div class=" text-gray-200 my-4 mx-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum doloremque praesentium repudiandae similique quas ipsa!</div>
+        
+        
+      </div>
+
+      <div class="flex justify-center sm:justify-between flex-wrap lg:flex-nowrap gap-y-[60px] gap-x-[90px] sm:gap-x-0 lg:w-7/12">
+
+        <div class="text-center sm:text-left">
+
+          <div class="mb-[18px]  text-[#FFFFFF] text-[18px] font-bold select-none">Quick Links</div>
+
+          <ul class="flex flex-col gap-[10px] text-[#FFFFFF]">
+            <a class="hover:underline" href="#">
+              <li>How it works   </li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Privacy policy</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Terms of Service</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Refund policy</li>
+            </a>
+          
+            
+          </ul>
+
+        </div>
+
+        <div class="text-center sm:text-left">
+
+          <div class="mb-[18px]  text-[#FFFFFF] text-[18px] font-bold select-none">Discover</div>
+
+          <ul class="flex flex-col gap-[10px] text-[#FFFFFF]">
+            <a class="hover:underline" href="#">
+              <li>Geeks CRS</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Tutor2U</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Kick-Ass Seniors</li>
+            </a>
+           
+          </ul>
+
+        </div>
+
+        <div class="text-center sm:text-left">
+
+          <div class="mb-[18px]  text-[#FFFFFF] text-[18px] font-bold select-none">Partners</div>
+
+          <ul class="flex flex-col gap-[10px] text-[#FFFFFF]">
+            <a class="hover:underline" href="#">
+              <li>Blog</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Newsletter</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Events</li>
+            </a>
+            <a class="hover:underline" href="#">
+            
+          </ul>
+
+        </div>
+           
+        
+  
+        
+
+      </div>
+  
+    </div>
+
+      <!--Copyright section-->
+  <div class=" p-6 bg-[#00B79C]"  >
+    <p class=" text-white mx-20">Copyright © 2022 Geeks CRS. All rights reserved. ABN: 59616635664</p>
+   
+  </div>
+
+  </div>
+
+<!--FOOTER Section end -->
+
+</body>
+</html>

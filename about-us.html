@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krazy It</title>
+  <link
+  href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
+  rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/stylesheet/home.css">
+  <link rel="stylesheet" href="assets/script/home.js">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Manrope:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body >
+  <!--Top Nav Section-->
+  <div class="top-nav " style="background-color: #557389;">
+    <p class="text-center text-[#FFFFFF] mx-2">www.krazyit@gmail.com <span class="mx-2">Follow Us</span> <span class="mx-2">Facebook</span> <span class="mx-2">Twitter</span></p>
+    
+  </div>
+
+  <!--End Top Nav Section-->
+
+  <!--Nav Section-->
+  <header class="h-20 bg-white">
+    <nav class="relative px-2 py-4">
+      
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="home.html"> <img src="assets/images/logo.png" alt="Tailwindcss Navigation"></a>
+
+          <ul class="hidden md:flex space-x-6">
+            <li><a href="home.html" class="text-[#00b79c] text-[18px]">Home</a></li>
+            <li><a href="about-us.html" class="text-[#00b79c] text-[18px]">About us</a></li>
+            <li class="flex relative group">
+              <a href="services.html" class="mr-1 text-[#00b79c] text-[18px]" >Services</a> 
+              
+              <!-- Submenu starts -->
+              <!-- <ul class="absolute bg-white p-3 w-52 top-6 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-lg">
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#" >Webdesign</a></li>
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#">Digital marketing</a></li>
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#">SEO</a></li>
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#">Ad campaigns</a></li>
+                <li class="text-sm hover:bg-slate-100 leading-8"><a href="#">UX Design</a></li>
+              </ul> -->
+              <!-- Submenu ends -->
+            </li>
+            <li><a href="#" class="text-[#00b79c] text-[18px]">Product</a></li>
+            <li><a href="#" class="text-[#00b79c] text-[18px]">Client</a></li>
+            <li><a href="#" class="text-[#00b79c] text-[18px]">Contact Us</a></li>
+          </ul>
+
+          <a href="#" class="bg-red-400 px-5 py-1 rounded-3xl hover:bg-red-500 text-white hidden md:flex" role="button">Sign In</a>
+        
+        <!-- Mobile menu icon -->
+        <button id="mobile-icon" class="md:hidden">
+          <i onclick="changeIcon(this)" class="fa-solid fa-bars"></i>
+        </button>
+        
+        </div>
+      
+      <!-- Mobile menu -->
+      <div class="md:hidden flex justify-center mt-3 w-full">
+        <div id="mobile-menu" class="mobile-menu absolute top-23 w-full"> <!-- add hidden here later -->
+          <ul class="bg-gray-100 shadow-lg leading-9 font-bold h-screen">
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="" class="block pl-7">Home</a></li>
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="#" class="block pl-7">News</a></li>
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white">
+              <a href="#" class="block pl-11">Services <i class="fa fa-sort-desc" style="font-size:24px"></i></a> 
+              
+              <!-- Submenu starts -->
+              <ul class="bg-white text-gray-800 w-full">
+                <li class="text-sm leading-8 font-normal hover:bg-dark-200"><a class="block pl-16" href="#">Webdesign</a></li>
+                <li class="text-sm leading-8 font-normal hover:bg-dark-200"><a class="block pl-16" href="#">Digital marketing</a></li>
+                <li class="text-sm leading-8 font-normal hover:bg-slate-200"><a class="block pl-16" href="#">SEO</a></li>
+                <li class="text-sm leading-8 font-normal hover:bg-slate-200"><a class="block pl-16" href="#">Ad campaigns</a></li>
+                <li class="text-sm leading-8 font-normal hover:bg-slate-200"><a class="block pl-16" href="#">UX Design</a></li>
+              </ul>
+              <!-- Submenu ends -->
+            </li>
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="#" class="block pl-7">About</a></li>
+            <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a href="#" class="block pl-7">Contact</a></li>
+          </ul>
+          </div>
+      </div>
+
+    </nav>
+  </header>
+  <!--End  Nav Section-->
+
+  <!-- about banner section start -->
+
+
+  <section class="relative py-24 px-4 ">
+    <div class="z-20 relative text-white container mx-auto">
+      <h1 class="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] ">We are Your Premier IT and </h1>
+      <h1 class=" text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] ">Tech Solutions Provider </h1>
+      <p class="leading-normal text-[20px] font-[500]"> Krazy IT began in 2008 as the vision of a single individual.Today, </p>
+      <p class="leading-normal  text-[20px] font-[500]">   we've grown into a dynamic IT and tech service provider,</p>
+      <p class="leading-normal  text-[20px] font-[500]">  specializing in personalized solutions for creative professionals.</p>
+      <p class="leading-normal  text-[20px] font-[500]">  and small to medium-sized organizations.</p>
+      <a href="#" class="inline-block bg-[#00B79C] text-white no-underline hover:bg-gray-800 mt-4  px-9 py-2 rounded text-[20px] font-[600]" style="border-radius: 10px;">Get Started</a>
+    </div>
+    <div class="absolute inset-0 h-auto z-10">
+      <img src="/assets/images/about-banner.png" alt="" class="h-full w-full object-fit-cover">
+    </div>
+  </section>
+ 
+ <!-- end banner section  -->
+
+  <!-- solution section start-->
+  <div class=" p-20 grid gap-4 grid-cols-2 container flex flex-col items-center  mx-auto">
+    <div><p class="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] text-[#00b79c]">We Are One of the Best , 
+       
+      IT solution Company</p>
+        
+      <p class=" text-[#243B59] text-[18px]">
+        Our mission is clear: we aim to empower our clients by handling  their IT and tech needs,
+
+        allowing them to focus on their core work.  We take pride in our two guiding principles
+        
+        - Honesty and Fun.  We're honest in our recommendations and enjoy every moment of 
+        
+        helping you succeed. <br> <br> Choose Krazy IT for top-notch IT and tech  services and a partnership
+        
+        that's both effective and enjoyable.</p>
+         <a href="#" class="inline-block bg-[#00B79C] text-white no-underline hover:bg-gray-800 mt-4  px-9 py-2 rounded text-[20px] font-[600]" style="border-radius: 10px;">See Our Services</a></div>
+    <div>   <img src="/assets/images/idea.png" class="my-10 mx-20" ></div>
+    
+  </div>
+ 
+  <!--solution section end-->
+
+<!--jarallex section start-->
+  <div class="min-h-screen  flex justify-center items-center bg-sea1 bg-fixed bg-no-repeat bg-cover bg-center bg-[url('/assets/images/about-2ndbanner.png')]">
+  <div> 
+    <h1 class="text-[35px] text-[#FFFFFF]">A Transparent and Collaborative Approach</h1>
+    <h1 class="text-[35px] text-[#FFFFFF]">  to Deliver Top-Notch IT Solution </h1>
+   <br>
+    <img src="/assets/images/video.png" alt="" class="mx-20">
+    <p class="text-[18px] text-[#FFFFFF] mx-20 my-5">Watch Now</p>
+
+  </div>
+    
+  </div>
+  
+
+<!--jarallex section end-->
+  
+<!-- Reviews solution section start-->
+ 
+<div class=" p-20 grid gap-4 grid-cols-2 container flex flex-col items-center  mx-auto">
+  <div>   <img src="/assets/images/static.png" class="" ></div>
+  <div><p class="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] text-[#00b79c] mx-8">We Are One of the Best , 
+     
+    IT solution Company</p>
+    <div class="grid gap-4 grid-cols-2 mx-8">
+      <div>  <h1 class=" text-[40px] text-4xl font-bold">500+</h1>
+        <p class="text-[#243B59] text-[18px]">Success full </p>
+        <p class="text-[#243B59] text-[18px]">Project Done</p></div>
+      <div><h1 class=" text-[40px] text-4xl font-bold">15+</h1>
+        <p class="text-[#243B59] text-[18px]">Years of  </p>
+        <p class="text-[#243B59] text-[18px]">Exprieanc</p></div>
+     
+    </div>
+    <div class="grid gap-4 grid-cols-2 mx-8 mt-3">
+      <div>    <h1 class=" text-[40px] text-4xl font-bold">166+</h1>
+        <p class="text-[#243B59] text-[18px]">Happy Clients </p></div>
+      <div><h1 class=" text-[40px] text-4xl font-bold">27+</h1>
+        <p class="text-[#243B59] text-[18px]">Team Member</p></div>
+     
+    </div>
+       <a href="#" class="inline-block bg-[#00B79C] text-white no-underline hover:bg-gray-800 mt-4 mx-8  px-9 py-2 rounded text-[20px] font-[600]" style="border-radius: 10px;">Get Started</a></div>
+ 
+  
+</div>
+  <!-- Reviews solution section end-->
+
+  
+<!--employ section start-->
+
+<!-- 
+
+<div class="
+bg-[#E0F2FF]">
+
+  <center>
+    <h1 class="title mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] text-[#00b79c] mx-8 my-20">Meet the Krazy Team</h1>
+  </center>
+
+
+
+  <div class="row container  ">
+   
+      
+
+
+    <div class="column ">
+      <div class="employ">
+        <div class="content">
+          <div class="front">
+            <img class="profile" src="/assets/images/employ.png" alt="Ronaldo">
+            <h2>Cristiano Ronaldo</h2>
+          </div>
+          <div class="back from-bottom">
+            
+     
+            <ul class="social-icon">
+              <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+					    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+					    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="column">
+      <div class="employ">
+        <div class="content">
+          <div class="front">
+            <img class="profile"  src="/assets/images/employ.png" alt="Ronaldo">
+            <h2>Cristiano Ronaldo</h2>
+          </div>
+          <div class="back from-bottom">
+            
+     
+            <ul class="social-icon">
+              <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+					    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+					    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="employ">
+        <div class="content">
+          <div class="front">
+            <img class="profile"  src="/assets/images/employ.png" alt="Ronaldo">
+            <h2>Cristiano Ronaldo</h2>
+          </div>
+          <div class="back from-bottom">
+            
+     
+            <ul class="social-icon">
+              <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+					    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+					    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="employ">
+        <div class="content">
+          <div class="front">
+            <img class="profile"  src="/assets/images/employ.png" alt="Ronaldo">
+            <h2>Cristiano Ronaldo</h2>
+          </div>
+          <div class="back from-bottom">
+            
+     
+            <ul class="social-icon">
+              <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+					    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+					    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<br> -->
+
+<!--employ section end-->
+
+
+
+<!--brand logo section start-->
+  <section class="text-gray-700 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <p class="text-dark text-center mb-4 text-1xl font-bold sm:text-4xl md:text-[40px] text-[#00b79c] mx-8">We Work With Top Brand</p>
+      <div class="flex flex-wrap -m-4 text-center my-10">
+        <div class="p-4 md:w-1/5 sm:w-1/2 w-full">
+          <div class=" border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+          <a href="">  <img src="/assets/images/gk.png" alt=""></a>
+            
+          </div>
+        </div>
+        <div class="p-4 md:w-1/5 sm:w-1/2 w-full">
+          <div class=" border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+         
+           <a href=""> <img src="/assets/images/gks.png" alt=""></a>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/5 sm:w-1/2 w-full">
+          <div class=" border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+          <a href="">  <img src="/assets/images/4u.png" alt=""></a>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/5 sm:w-1/2 w-full">
+          <div class=" border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+           <a href=""><img src="/assets/images/ticket.png" alt=""></a>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/5 sm:w-1/2 w-full">
+          <div class=" border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+           <a href=""><img src="/assets/images/gkf.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!--brand logo section end-->
+
+
+<!--FOOTER Section start -->
+
+
+  <div class="flex flex-col mx-auto">
+
+    <div class="flex lg:items-center lg:justify-between flex-col lg:flex-row gap-y-[45px] py-[30px] lg:py-0 px-[15px] sm:px-[30px] md:px-[40px] lg:px-[50px] xl:px-[75px] w-full h-auto lg:h-[380px] bg-[#00B79C]">
+
+      <div class="lg:w-4/12">
+
+        <img src="/assets/images/footer-banner.png" alt="" class="mx-20 ">
+
+        <div class=" text-gray-200 my-4 mx-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum doloremque praesentium repudiandae similique quas ipsa!</div>
+
+      </div>
+
+      <div class="flex justify-center sm:justify-between flex-wrap lg:flex-nowrap gap-y-[60px] gap-x-[90px] sm:gap-x-0 lg:w-7/12">
+
+        <div class="text-center sm:text-left">
+
+          <div class="mb-[18px]  text-[#FFFFFF] text-[18px] font-bold select-none">Quick Links</div>
+
+          <ul class="flex flex-col gap-[10px] text-[#FFFFFF]">
+            <a class="hover:underline" href="#">
+              <li>How it works   </li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Privacy policy</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Terms of Service</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Refund policy</li>
+            </a>
+          
+            
+          </ul>
+
+        </div>
+
+        <div class="text-center sm:text-left">
+
+          <div class="mb-[18px]  text-[#FFFFFF] text-[18px] font-bold select-none">Discover</div>
+
+          <ul class="flex flex-col gap-[10px] text-[#FFFFFF]">
+            <a class="hover:underline" href="#">
+              <li>Geeks CRS</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Tutor2U</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Kick-Ass Seniors</li>
+            </a>
+           
+          </ul>
+
+        </div>
+
+        <div class="text-center sm:text-left">
+
+          <div class="mb-[18px]  text-[#FFFFFF] text-[18px] font-bold select-none">Partners</div>
+
+          <ul class="flex flex-col gap-[10px] text-[#FFFFFF]">
+            <a class="hover:underline" href="#">
+              <li>Blog</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Newsletter</li>
+            </a>
+            <a class="hover:underline" href="#">
+              <li>Events</li>
+            </a>
+            <a class="hover:underline" href="#">
+            
+          </ul>
+
+        </div>
+
+        
+
+        
+
+      </div>
+
+    </div>
+
+     <!--Copyright section-->
+  <div class=" p-6 bg-[#00B79C]"  >
+    <p class=" text-white mx-20">Copyright © 2022 Geeks CRS. All rights reserved. ABN: 59616635664</p>
+   
+  </div>
+
+  </div>
+
+<!--FOOTER Section end -->
+
+  </div>
+
+
+</body>
+</html>
